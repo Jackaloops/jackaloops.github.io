@@ -1,19 +1,32 @@
 function calZodiac() {
-	var output = document.getElementbyId('results');
 
-	var fName = document.getElementbyId('fname').value;
-	var lName = document.getElementbyId('lname').value;
-	var bDay = new Date(document.getElementbyId('date').value);
+	console.log('function called');
+	var output = document.getElementById('results');
+	output.innerHTML = 'test';
+
+	var fName = document.getElementById('fname').value;
+	var lName = document.getElementById('lname').value;
+	var bDay = new Date(document.getElementById('bdate').value);
 
 	var month = bDay.getMonth() + 1;
-	var day = bDay.getDate() + 1;
-	var currentYear = Date.getDate;
+	var day = bDay.getDate();
 
 	//calculate year
-	if(( currentYear.getMonth() <= month ) && ( currentYear.getDate() <= day ))
-		{ age = currentYear.getFullYear() - bDay.getFullYear() - 1; }
+	var age; 
+
+	var current = new Date();
+	var currentYear = current.getFullYear();
+	var currentMonth = current.getMonth() + 1;
+	var currentDay = current.getDate();
+
+	console.log('year ' + currentYear);
+	console.log('month ' + currentMonth);
+	console.log('day ' + currentDay);
+
+	if( month > currentMonth || ((month == currentMonth) && (day > currentDay))) //ehecks if birthday hasn't arrived yet for this year
+		{ age = currentYear- bDay.getFullYear() - 1; }
 	else
-		{ age = currentYear.getFullYear() - bDay.getFullYear(); }
+		{ age = currentYear - bDay.getFullYear(); }
 
 	//calculate sign
 	var sign;
@@ -40,12 +53,13 @@ function calZodiac() {
 		{ sign = 'Libra'; }
 	else if ((month == 10 && day >= 23) | (month == 11 && day <= 21))
 		{ sign = 'Scorpio'; }
-	else if ((month == 11 && day) >= 22 | (month == 12 && day <= 21))
+	else if ((month == 11 && day >= 22) | (month == 12 && day <= 21))
 		{ sign = 'Sagittarius'; }
 	else
 		{ sign = 'undefined'; }
 
-	output.innerHTML = 'Hello, ' + fName + ' ' + lName + ', you'
+	output.innerHTML = 'Hello, ' + fName + ' ' + lName + ', you\'re ' + age + ' years old and your sign is the ' + sign;
 
+	return false;
 
 }
