@@ -1,11 +1,31 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Poiret+One|Trochut');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Poiret+One|Trochut|Bahiana|Unica+One|Amatic+SC|Amatica+SC|Lobster+Two|Oleo+Script|Life+Savers|Wire+One|Yanone+Kaffeesatz:200');
 
 * {
 	box-sizing: border-box;
 }
 
+#logo {
+	width: 20vw;
+	margin: 0 auto;
+}
+
+#title_wrap {
+	width: 100vw;
+}
+
+#title_wrap * {
+		display: inline-block;
+		font-size: 4rem;
+}
+
 .title-font {
-	font-family: "Trochut", sans-serif;
+	font-family: "Oleo Script", sans-serif;
+	/*font-weight: bold;*/
+}
+
+#title-rest {
+	font-family: "Yanone Kaffeesatz", sans-serif;
+	font-size: 3.5rem;
 }
 
 .center-text {
