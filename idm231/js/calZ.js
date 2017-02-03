@@ -58,7 +58,15 @@ function calZodiac() {
 	else
 		{ sign = 'undefined'; }
 
-	output.innerHTML = 'Hello, ' + fName + ' ' + lName + ', you\'re ' + age + ' years old and your sign is the ' + sign;
+	var msg = '<p>' + 'Hello, ' + fName + ' ' + lName + ', you\'re ' + age + ' years old and your sign is the ' + sign + '</i>';
+	msg += '<p>CANDLES: ';
+	for(i = 0; i < age; i++)
+	{
+		msg += 'i ';
+	}
+
+	output.innerHTML = msg;
+
 
 	return false;
 

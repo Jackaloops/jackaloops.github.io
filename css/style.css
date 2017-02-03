@@ -1,3 +1,14 @@
-#name {
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Poiret+One|Trochut');
+
+* {
+	box-sizing: border-box;
+}
+
+.title-font {
+	font-family: "Trochut", sans-serif;
+}
+
+.center-text {
 	text-align: center;
 }
+
