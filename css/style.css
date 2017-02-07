@@ -1,34 +1,71 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Poiret+One|Oleo+Script|Yanone+Kaffeesatz:200');
 
-* {
-	box-sizing: border-box;
+*
+{
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
-#logo {
-	width: 20vw;
+#logo
+{
+	width: 60%;
 	margin: 0 auto;
 }
 
-#title_wrap {
-	width: 100vw;
+#logo img
+{
+    	width: 100%;
 }
 
-#title_wrap * {
-		display: inline-block;
-		font-size: 4rem;
+#title_wrap
+{
+    width: 100vw;
 }
 
-.title-font {
-	font-family: "Oleo Script", sans-serif;
-	/*font-weight: bold;*/
+#title_wrap *
+{
+    font-size: 4rem;
+
+    display: inline-block;
 }
 
-#title-rest {
-	font-family: "Yanone Kaffeesatz", sans-serif;
-	font-size: 3.5rem;
+.title-font
+{
+    font-family: 'Oleo Script', sans-serif;
+    /*font-weight: bold;*/
 }
 
-.center-text {
-	text-align: center;
+#title-rest
+{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 3.5rem;
 }
 
+.center-text
+{
+    text-align: center;
+}
+
+
+.hr-wrap {
+	width: 80%;
+	margin: 0 auto;
+}
+
+#nav_wrap {
+
+}
+
+@media screen and (min-width: 650px)
+{
+	#logo {
+		margin: 0 auto;
+		width: 20%;
+	}
+	
+}
