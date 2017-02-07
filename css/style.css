@@ -2,24 +2,30 @@
 
 *
 {
-    box-sizing: border-box;
+    font: inherit;
+    font-size: 100%;
 
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-size: 100%;
-    font: inherit;
+
     vertical-align: baseline;
+}
+
+body
+{
+    padding: 15% 0;
 }
 
 #logo
 {
-	width: 60%;
-	margin: 0 auto;
+    width: 60%;
+    margin: 0 auto;
 }
 
 #logo img
 {
-    	width: 100%;
+    width: 100%;
 }
 
 #title_wrap
@@ -34,16 +40,15 @@
     display: inline-block;
 }
 
-.title-font
-{
-    font-family: 'Oleo Script', sans-serif;
-    /*font-weight: bold;*/
-}
-
 #title-rest
 {
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-size: 3.5rem;
+}
+
+#subtitle
+{
+	padding: 10px;
 }
 
 .center-text
@@ -52,20 +57,61 @@
 }
 
 
-.hr-wrap {
-	width: 80%;
-	margin: 0 auto;
-}
-
-#nav_wrap {
-
-}
-
-@media screen and (min-width: 650px)
+.hr-wrap
 {
-	#logo {
-		margin: 0 auto;
-		width: 20%;
-	}
-	
+    width: 80%;
+    margin: 0 auto;
+}
+
+.title-font
+{
+    font-family: 'Oleo Script', cursive;
+    /*font-weight: bold;*/
+}
+
+.h-font
+{
+    font-family: 'Poiret One', sans-serif;
+    font-size: 1.5rem;
+}
+
+#wrap_all
+{
+    padding: 0 auto;
+}
+
+/* menu */
+
+#menu_toggle {
+	display: none;
+}
+
+#toggle_button {
+	width: 4rem;
+	position: fixed;
+
+	left: -5px;
+	bottom: 5px;
+}
+
+#menu {
+	display: none;
+}
+
+#menu_toggle:checked + #menu {
+	display: block;
+
+	position: fixed;
+	bottom: 16px;
+	left: 85px;
+}
+
+
+@media screen and (min-width: 450px)
+{
+    #logo
+    {
+        width: 20%;
+        margin: 0 auto;
+    }
 }
