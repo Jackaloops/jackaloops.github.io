@@ -2,12 +2,15 @@
 <html>
 <head>
 	<title>Jack's Showcase</title>
+	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 	<meta name="viewport" content="initial-scale=1.0, width=device-width"/>
 </head>
 
 
 <body>
+
+<div class="flex_parent">
 
 <div id="wrap_all">
 
@@ -29,10 +32,12 @@
 <label for="menu_toggle" id="toggle_button"><img src="img/menu.svg" alt="menu button"></label>
 <input type="checkbox" id="menu_toggle" />
 <ul id="menu">
-	<li><a href="about.html">About</a></li>
-	<li><a href="port.html">Showcase</a></li>
-	<li><a href="contact.html">Contact</a></li>
+	<li id="about_tab"><a href="about.html">About</a></li>
+	<li id="port_tab"><a href="port.html">Showcase</a></li>
+	<li id="contact_tab"><a href="contact.html">Contact</a></li>
 </ul>
+
+</div>
 
 <!-- navbar 
 <div id="nav_wrap">
