@@ -348,11 +348,6 @@ a
         transform: translate(0, -5px);
     }
 
-    .hover-shadow img:hover {
-        -webkit-filter: drop-shadow(2px 2px 2px #555);
-        filter: drop-shadow(2px 2px 2px #555);
-    }
-
     #showcase_button {
         width: 9rem;
     }
