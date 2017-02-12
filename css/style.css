@@ -4,19 +4,20 @@
 {
     font: inherit;
     font-size: 100%;
-
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-
     vertical-align: baseline;
+    box-sizing: border-box;
 }
 
-body {
-	padding: 10px;
-
-	width: 100vw;
+body
+{
+    width: 100vw;
     height: 100vh;
+    padding: 10px;
+    background-image: url("../img/tree_bark.png");
+    background-repeat: repeat;
+    
 }
 
 /*
@@ -34,6 +35,7 @@ body {
 {
     width: 60%;
     margin: 0 auto;
+    flex-shrink: 0;
 }
 
 #logo img
@@ -43,24 +45,19 @@ body {
 
 #title_wrap
 {
-    width: 100%;
+    
+    text-align: left;
+
+    flex-shrink: 2;
+
+    padding-left: 1rem;
+    
+}
+
+#title {
     display: flex;
-
     flex-wrap: wrap;
-    justify-content: center;
     align-items: baseline;
-
-}
-
-#title-rest
-{
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: 3.5rem;
-}
-
-.hr-wrap
-{
-	padding: 10px;
 }
 
 .center-text
@@ -68,12 +65,6 @@ body {
     text-align: center;
 }
 
-
-.hr-wrap
-{
-    width: 80%;
-    margin: 0 auto;
-}
 
 
 /*
@@ -103,7 +94,6 @@ body {
 
 #menu
 {
-    
     position: fixed;
     bottom: 63px;
     left: -5px;
@@ -113,43 +103,40 @@ body {
 
 #menu li
 {
+    width: 200px;
     margin: 10px;
 
     list-style: none;
 
-    background-color: #eee;
-    width: 200px;
+    text-align: center;
+
     border-width: 15px;
     border-style: solid;
     border-color: #eee;
     border-radius: 100px;
-
-    text-align: center;
-
+    background-color: #eee;
     box-shadow: 2px 2px 5px #999;
-
 }
 
 #menu li a
 {
-    font-family: "Josefin Sans", sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
     font-size: 2rem;
-
 }
 
 #port_tab
 {
-	transform: translate(15px);
+    transform: translate(15px);
 }
 
-#about_tab 
+#about_tab
 {
-	transform: translate(30px);
+    transform: translate(30px);
 }
 
 #home_tab
 {
-	transform: translate(45px);
+    transform: translate(45px);
 }
 
 #menu_toggle:checked + #menu
@@ -159,6 +146,14 @@ body {
 
 #navlinks
 {
+    display: none;
+}
+
+.hr-wrap {
+    display: none;
+}
+
+hr {
     display: none;
 }
 
@@ -177,22 +172,75 @@ body {
 .flex_parent
 {
     display: flex;
-    flex-wrap: wrap;
 
     width: 100%;
-    height: 95%;
-
     justify-content: center;
-
+    align-items: center;
+    height: 100%;
 }
 
 #wrap_all
 {
-    margin: auto;
-    width: 100%
 
     flex-shrink: 0;
+    flex-grow: 0;
+
+    margin: 0 auto;
+
+    width: 100%;
 }
+
+#navlink_container {
+    display: none;
+}
+
+/*
+ /$$$$$$$$ /$$$$$$  /$$   /$$ /$$$$$$$$ /$$$$$$ 
+| $$_____//$$__  $$| $$$ | $$|__  $$__//$$__  $$
+| $$     | $$  \ $$| $$$$| $$   | $$  | $$  \__/
+| $$$$$  | $$  | $$| $$ $$ $$   | $$  |  $$$$$$ 
+| $$__/  | $$  | $$| $$  $$$$   | $$   \____  $$
+| $$     | $$  | $$| $$\  $$$   | $$   /$$  \ $$
+| $$     |  $$$$$$/| $$ \  $$   | $$  |  $$$$$$/
+|__/      \______/ |__/  \__/   |__/   \______/ 
+*/
+
+
+.title-font
+    {
+        font-family: 'Oleo Script', cursive;
+        font-size: 4rem;
+        /*font-weight: bold;*/
+    }
+
+    .h-font
+    {
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        font-size: 1.5rem;
+        font-style: italic;
+    }
+
+    .b-text
+    {
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 1rem;
+    }
+
+    #title-rest
+    {
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        font-size: 3.5rem;
+        float: left;
+    }
+
+
+a
+{
+    text-decoration: none;
+
+    color: #000;
+}
+
 
 
 /*
@@ -210,8 +258,8 @@ body {
 {
     #logo
     {
-        width: 20%;
-        margin: 0 auto;
+        width:20vh;
+        margin: 0;
     }
 
     #toggle_button
@@ -219,57 +267,122 @@ body {
         display: none;
     }
 
-    #navlinks {
-        display: block;
-        position: fixed;
-
-        text-align: center;
-        
+    footer
+    {
         font-size: 1.1rem;
 
-        width: 100vw;
+        position: fixed;
+        bottom: 0;
+        left: 0;
 
-        padding: 5px;
-        bottom: 0px;
-        left: 0px;
+        display: block;
+
+        width: 100vw;
+        padding: 10px;
+
+        text-align: center;
     }
 
+    #logo_wrap {
+        width: 80%;
 
+        margin: 0 auto;
+        padding: 1rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hr-wrap
+    {
+        display: block;
+
+        padding: 1px;
+        padding-bottom: 0px;
+        width: 80%;
+        margin: 0 auto;
+        
+        background-color: #000;
+        height: 0px;
+    }
+
+    hr {
+        display: block;
+    }
+
+    #rope_container {
+        width: 100%;
+        height: 20vh;
+        padding-left: 9.5%;
+        padding-right: 9.5%;
+
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .rope {
+        background-color: #000;
+        height: 100%;
+        width: 2px;
+
+    }
+    
+    #navlink_container 
+    {
+
+        width: 100%;
+        padding-left: 10%;
+        padding-right: 10%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .link-wrap{
+        width: 7rem;
+        font-size: 2rem !important;
+        text-align: center;
+    }
+
+    .link-wrap:hover {
+        transform: translate(0, -5px);
+    }
+
+    .hover-shadow img:hover {
+        -webkit-filter: drop-shadow(2px 2px 2px #555);
+        filter: drop-shadow(2px 2px 2px #555);
+    }
+
+    #showcase_button {
+        width: 9rem;
+    }
+
+    .title-font
+    {
+        font-family: 'Oleo Script', cursive;
+        font-size: 7rem;
+        /*font-weight: bold;*/
+    }
+
+    .h-font
+    {
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        font-size: 3rem;
+        font-style: italic;
+    }
+
+    .b-text
+    {
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 1.25rem;
+    }
+
+    #title-rest
+    {
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        font-size: 6rem;
+        float: left;
+    }
 
 }
 
-/*
- /$$$$$$$$ /$$$$$$  /$$   /$$ /$$$$$$$$ /$$$$$$ 
-| $$_____//$$__  $$| $$$ | $$|__  $$__//$$__  $$
-| $$     | $$  \ $$| $$$$| $$   | $$  | $$  \__/
-| $$$$$  | $$  | $$| $$ $$ $$   | $$  |  $$$$$$ 
-| $$__/  | $$  | $$| $$  $$$$   | $$   \____  $$
-| $$     | $$  | $$| $$\  $$$   | $$   /$$  \ $$
-| $$     |  $$$$$$/| $$ \  $$   | $$  |  $$$$$$/
-|__/      \______/ |__/  \__/   |__/   \______/ 
-*/
-
-.title-font
-{
-    font-family: 'Oleo Script', cursive;
-    font-size: 4rem;
-    /*font-weight: bold;*/
-}
-
-.h-font
-{
-    font-family: 'Poiret One', sans-serif;
-    font-size: 1.5rem;
-}
-
-.b-text
-{
-	font-family: 'Josefin Sans', sans-serif;
-	font-size: 1.25rem;
-
-}
-
-a {
-    text-decoration: none;
-    color: #777;
-}
