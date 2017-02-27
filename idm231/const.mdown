@@ -7,10 +7,12 @@
 	*Queen Asha
 * Originally referred to Urthemiel, Old God of Beauty
 
-Those born under Bellitanus are ambitious and filled with determination.
+You are goal-oriented and determined, but can be a bit vain. You tend to have a positive outlook on life that some consider naive, but your ambition keeps you from being aloof. Those born under Bellitanus are said to be blessed with great beauty, and many prominent Queens of the past have been said to be personifications of The Maiden.
 
 ## Draconis - High Dragon
 * Possibly used to refer to an unknown Old God in Ancient Tevinter
+
+You may seem rather calculating and distant, but in truth you are looking out for those around you. Draconis are the most vigilant of all the signs, protecting the people and things they value with a fiery spirit. On the downside, Draconis can get carried away with the amassing of material wealth.
 
 ## Eluvia - Sacrifice
 * Orlesian tale of same name
@@ -19,36 +21,52 @@ Those born under Bellitanus are ambitious and filled with determination.
 * Formerly represented Razikale, Tevinter Old God or mystery
 * Many superstitions around the granting of wishes
 
+Legend says this sign came to be when Eluvia, a young maiden, was sent into the sky by her father to save her from the attentions of a lustful mage, and the mage then killed him in vengeance. Eluvias are sensitive creatures always attuned to the emotions of those around her. Perhaps it is because of this that you are always surrounded by friends despite their your nature. However, you tend to get lost in the turmoils of others and forget to care for yourself.
+
 ## Equinor - The Stallion
 * Depicted as a rearing horse or seated griffon
 * speculation that it used to be a halla
+
+Pragmatic and down-to-earth, you are a hard worker who is always striving towards a goal. Equinors know exactly what they want and how they are going to do it. They are workaholics who can be in danger of neglecting their personal relationships when they become engrossed in their work.
 
 ## Fenrir - White Wolf
 * Weird, because wolves hold no significance in Old Tevinter lore.
 * Suggests Tevinter constellations based off of old Elven constellations
 
+You always put your loved ones first, and are fiercely protective of those you see as "family". Fenrirs are passionate above everything else, and make for intense and dramatic lovers. However, this passion can  also lead to impulsive decision making and quick tempers.
+
 ## Fervenial - the Oak
 * Nature
 * Possibly originally the Hunt
+
+You are calm, generous, and trustworty. Like the the shade of an oak tree for friends to rest beneath, peers often find you to be a shoulder to cry on during times of crisis, and you are always there to help. Fervenials should remember that even as they care for the needs of others, they should not hesitate to speak up for their own.
 
 ## Judex - the Sword of Mercy
 * Judex referred to justic
 * Downturned sword indicated guilty verdict -> execution
 * Used as symbol of Templar Order in modern times
 
+You are rational, upright, and moral to a fault. You value honesty and justness above all else, and don't demand any less from those you choose to befriend. The upright yet stubborn nature of a Judex will gain you as many enemies as friends. Those born under Judex should keep in mind that the world isn't always black and white.
+
 ## Kios - Chaos
 * Old God Zazikel
 * Stars seen as ill omens
 * Man with bird wing as left arm and sword in right arm?
+
+The most unpredictable of the signs, you brim with creative energy. You hate being tied down with labels and definitions and take joy out of defying expectations. A free spirit to the end, Kios can have trouble keeping commitments and maintaining lasting relationships.
 
 ## Peraquialus - Voyager
 * Primitive ship
 * Literal translation is "across the sea"
 * lends credence that Neromenians came to Thedas from elsewhere
 
+Peraquialus are natural adventurers. You are born with a sense of wanderlust, and seek excitement like a hound tracking game. You are outgoing and easy to befriend, often finding yourself to be the heart of the party anywhere you go. Peraquialus are also rather foolhardy and drawn to trouble. Remember that it at the end of the day, quality counts over quantity in friendships.
+
 ## Satinalis - Satina (moon) or Satinalia (the holiday)
 * Depicted by the Celebrant: a seated dude playing the lyre
 * Formerly known as "Mortemalis", represented by warrior holding head (usually of an elf). Now all but forgotten
+
+Satinalis are often the "parent" of whatever friend group they inhabit. You have a strong nurturing instinct which leads you into mothering your friends more often than not, and that profound sense of caring makes you a cherished part of any relationship. Be aware that this parent-like tendency can also lead you to seem nosy when careless.
 
 ## Servani - the Chained Main
 * Man dragging heavy chain
@@ -65,11 +83,15 @@ Those born under Bellitanus are ambitious and filled with determination.
 * Possibly depiction of both Sun AND Moon
 * Possibly Elvhen Elgar'nan, "Eldest of the Sun"
 
+You are cheerful and upbeat, lighting up everyone's day. Soliums tend to be the 'epicenter' of their group of friends, as many people are introduced to each other through them. However, you can tend to be somewhat self-centered.
+
 ## Tenebrium - Shadow
 * Lusacan, Old God of Darkness & night
 * Depicted as an Owl, oddly.
 * Possibly Elvhen Falon'Din
 * Owls considered omens of loss
+
+You are quiet and observant, easily blending into the background of things. Though many find you possibly, you are always observing the world around you. When you do speak up, people are often surprised by the insight you provide.
 
 ## Toth - Dragon of Fire
 * Usually a man on fire and in pain lol

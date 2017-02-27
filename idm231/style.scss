@@ -1,0 +1,66 @@
+* {
+    font-size: 100%;
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+	font-family: para;
+	src: url('fonts/asul-regular.ttf');
+}
+
+@font-face {
+	font-family: title;
+	src: url('fonts/inquisition-smallcaps.ttf')
+}
+
+html {
+	background-image: url(bkg.jpg);
+}
+
+body {
+	h1 {
+		padding: 3rem;
+	}
+
+	form {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	main {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+
+		width: 100%;
+		padding: 3rem;
+
+		img {
+			height: 80vh;
+			flex-shrink: 0;
+		}
+
+		#results {
+			width: 35%;
+		}
+	}
+}
+
+.t-font {
+	color: #3CB371;
+	font-family: 'title';
+	font-size: 4rem;
+	opacity: .75;
+
+	text-align: center;
+}
+
+.p-font {
+	color: #fff;
+	font-family: 'para';
+	font-size: 2rem;
+	opacity: .75;
+}
