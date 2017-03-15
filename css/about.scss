@@ -1,0 +1,38 @@
+body
+{
+	padding: 0;
+
+	main
+	{	
+		margin: auto;
+		width: 50vw;
+		min-height: 100vh;
+		background-image: url(../img/seamless_paper_texture.png);
+
+		padding: 5rem;
+
+		img
+		{
+			float: center;
+			margin-left: 1rem;
+		}
+
+		.title-font
+		{
+			margin: 0;
+			padding-bottom: 1rem;
+		}
+
+		.b-text
+		{
+			font-size: 1.25rem;
+		}
+
+		p
+		{
+			padding-bottom: 1rem;
+
+			text-align: justify;
+		}
+	}
+}

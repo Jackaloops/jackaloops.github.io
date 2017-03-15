@@ -6,7 +6,7 @@
 	<title>Zodiac Calculator</title>
 </head>
 <body>
-	<h1 class="t-font">Dragon Age Signs</h1>
+	<h1 class="t-font fadeInOut">Dragon Age Zodiacs</h1>
 
 	<form onsubmit="return calZodiac();">
 		
@@ -14,18 +14,41 @@
 		<p><input type="text" id="lname" name="lname" placeholder="Last Name" required></p>
 		<p><input type="date" id="bdate" name="bdate" required></p>
 
-		<p><input type="submit"></p>
+		<p><input type="submit" value="&#10146"></p>
 
 	</form>
 
 	<main>
-		<p id="results" class="p-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est quos inventore enim ab similique possimus voluptatibus laboriosam sint. Numquam temporibus, facilis maiores laborum nulla repellendus nesciunt labore ipsa atque ad.</p>
+		<div class="text-area">
+			<div id="sign-title" class="t-font fadeInOut">Your Sign Here</div>
+			<p id="results" class="p-font"></p>
+		</div>
 		<img src="const/bel.svg" alt="zodiac image">
 	</main>
+	
+	<input type="checkbox" id="menu_toggle" />
+	
+	<div class="label-container"><label for="menu_toggle" id="toggle_button">&#10023&#10022&#10023</label></div>
+
+	
+
+	<ul>
+		<li><div class="star">&#10022</div>Bel</li>
+		<li><div class="star">&#10022</div>Dra</li>
+		<li><div class="star">&#10022</div>Elu</li>
+		<li><div class="star">&#10022</div>Equ</li>
+		<li><div class="star">&#10022</div>Fen</li>
+		<li><div class="star">&#10022</div>Fer</li>
+		<li><div class="star">&#10022</div>Jud</li>
+		<li><div class="star">&#10022</div>Kio</li>
+		<li><div class="star">&#10022</div>Per</li>
+		<li><div class="star">&#10022</div>Sat</li>
+		<li><div class="star">&#10022</div>Ten</li>
+		<li><div class="star">&#10022</div>Sol</li>
+	</ul>
 
 	<script src="js/calZ.js"></script>
 </body>
 
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="css/normalize.css">
 </html>

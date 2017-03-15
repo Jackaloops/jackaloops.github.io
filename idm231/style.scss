@@ -1,4 +1,12 @@
-* {
+$title-color: #3cb371;
+$white: #fff;
+$input-color: #39ccba;
+$para-text: 'para';
+$title-text: 'title';
+$highlight-color: #0f9;
+
+*
+{
     font-size: 100%;
 
     box-sizing: border-box;
@@ -6,61 +14,255 @@
     padding: 0;
 }
 
-@font-face {
-	font-family: para;
-	src: url('fonts/asul-regular.ttf');
+@font-face
+{
+    font-family: $para-text;
+
+    src: url('fonts/asul-regular.ttf');
 }
 
-@font-face {
-	font-family: title;
-	src: url('fonts/inquisition-smallcaps.ttf')
+@font-face
+{
+    font-family: title;
+
+    src: url('fonts/inquisition-smallcaps.ttf');
 }
 
-html {
-	background-image: url(bkg.jpg);
+html
+{
+    background-image: url(bkg.jpg);
 }
 
-body {
-	h1 {
-		padding: 3rem;
+body
+{
+	margin: 0 auto;
+	text-align: center;
+
+    h1
+    {
+        padding: 3rem;
+    }
+    form
+    {
+        display: flex;
+
+        justify-content: space-around;
+
+        align-items: center;
+
+		font-size: 1.5rem;
+		opacity: .90;
+		
+		width: 70%;
+     	margin: auto;
+
+        input[type="text"]
+        {
+			width: 13rem;
+
+        	border: none;
+        	background-color: rgba(0, 0, 0, 0);
+			
+			font-family: $para-text;
+			color: $white;
+			font-style: italics;
+			text-align: center;
+			
+			outline: none;
+
+        	border-bottom: solid 2px $title-color;
+        }
+
+        input[type="date"]
+        {
+        	border: none;
+        	background-color: rgba(0, 0, 0, 0);
+
+        	width: 13rem;
+
+        	font-family: $para-text;
+			color: $white;
+			font-style: italics;
+			text-align: center;
+
+			outline: none;
+			border-bottom: solid 2px $title-color;
+        }
+
+        input[type="submit"]
+        {
+        	background: rgba(0, 0, 0, 0);
+        	color: $title-color;
+
+			font-size: 3rem;
+
+        	border: none;
+        }
+
+
+    }
+    main
+    {
+        // height: 100%;
+
+        justify-content: space-around;
+        align-items: center;
+
+        display: flex;
+        width: 100%;
+        padding: 3rem;
+        padding-bottom: 1rem;
+        .text-area
+        {
+            height: 100%;
+
+            flex-shrink: 0;
+            width: 40%;
+
+            #sign-title
+            {
+				padding-bottom: 2rem;
+            }
+        }
+        img
+        {
+            height: 60vh;
+
+            flex-shrink: 1;
+        }
+    }
+
+    #menu_toggle
+    {
+    	display: none;   	
 	}
 
-	form {
-		display: flex;
-		justify-content: space-around;
-	}
 
-	main {
-		display: flex;
+	#menu_toggle:checked ~ .label-container
+    {
+    	bottom: 100px;
+    	
+    }
+
+    #menu_toggle:checked ~ ul
+    {
+    	bottom: 0;
+    }
+	
+	.label-container
+    {
+    	position: absolute;
+    	margin: 0 auto;
+		width: 100%;
+    	bottom: 0;
+
+    	transition: bottom .1s linear;
+
+    	#toggle_button
+    	{
+    		position: relative;
+	 		margin: 0 auto;
+	 		background-color: rgba(0, 0, 0, .5);
+	 		width: 5rem;
+		
+			font-size: 1.25rem;
+    		color: $title-color;
+
+    	}
+    }
+
+    ul
+    {
+    	display: flex;
+    	width: 100%;
+    	height: 101px;
+
+		position: fixed;
+		bottom: -101px;
+		
 		justify-content: space-around;
 		align-items: center;
 
-		width: 100%;
-		padding: 3rem;
+		background-color: rgba(0, 0, 0, .5);
 
-		img {
-			height: 70vh;
-			flex-shrink: 0;
-		}
+		transition: bottom .1s linear;
 
-		#results {
-			width: 35%;
+		li
+		{
+			display: inline-block;
+
+			color: $title-color;
+
+			.star
+			{
+				font-size: 3rem;
+			}
 		}
-	}
+    }
+}
+.t-font
+{
+    font-family: 'title';
+    font-size: 4rem;
+
+    text-align: center;
+
+    opacity: .60;
+    color: $title-color;
+	
 }
 
-.t-font {
-	color: #3CB371;
-	font-family: 'title';
-	font-size: 4rem;
-	opacity: .75;
+.p-font
+{
+    font-family: $para-text;
+    font-size: 1.5rem;
 
-	text-align: center;
+    opacity: .75;
+    color: #fff;
 }
 
-.p-font {
-	color: #fff;
-	font-family: 'para';
-	font-size: 2rem;
-	opacity: .75;
+.fadeInOut {
+	-webkit-animation: fadeIn 4s infinite alternate;
+	-moz-animation: fadeIn 4s infinite alternate;
+	-ms-animation: fadeIn 4s infinite alternate;	
+	-o-animation: fadeIn 4s infinite alternate;
+	animation: fadeIn 4s infinite alternate;
+}
+
+@-webkit-keyframes fadeIn {
+	from {	opacity: .2;	}
+}
+
+@-moz-keyframes fadeIn {
+	from {	opacity: .2;	}
+}
+
+@-o-keyframes fadeIn {
+	from {	opacity: .2;	}
+}
+
+@-ms-keyframes fadeIn {
+	from {	opacity: .2;	}
+}
+
+@keyframes fadeIn {
+	from {	opacity: .2;	}
+}
+
+::selection
+{
+	color: $highlight-color;
+}
+
+::-webkit-datetime-edit-text
+{
+	color: $title-color;
+}
+
+::-webkit-calendar-picker-indicator 
+{ 
+	display: none;
+}
+::-webkit-inner-spin-button { 
+	display: none;
 }

@@ -1,7 +1,8 @@
 function calZodiac() {
     console.log("function called");
     var output = document.getElementById("results");
-    output.innerHTML = "test";
+    var title = document.getElementById('sign-title');
+
     var main = document.getElementsByTagName("main")[0];
 
     var fName = document.getElementById("fname").value;
@@ -100,6 +101,7 @@ function calZodiac() {
         ".</i>" + ' ' + descript;
 
     output.innerHTML = msg;
+    title.innerHTML = sign;
 
     return false;
 }
