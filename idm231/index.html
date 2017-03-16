@@ -8,13 +8,12 @@
 <body>
 	<h1 class="t-font fadeInOut">Dragon Age Zodiacs</h1>
 
-	<form onsubmit="return calZodiac();">
-		
+	<form id="form" onsubmit="return calZodiac();">
 		<p><input type="text" id="fname" name="fname" placeholder="First Name" required></p>
 		<p><input type="text" id="lname" name="lname" placeholder="Last Name" required></p>
-		<p><input type="date" id="bdate" name="bdate" required></p>
+		<p><input type="date" id="bdate" name="bdate" max="2017-03-16" required></p>
 
-		<p><input type="submit" value="&#10146"></p>
+		<p><input type="submit" value="&#10146" id="submit_button"></p>
 
 	</form>
 
@@ -33,21 +32,22 @@
 	
 	<!--okay, not the most elegant solution but do I really want to make 12 event listeners? -->
 	<ul>
-		<a href="" onclick="return displayZodiac(12, 22)"><li><div class="star">&#10022</div>Bel</li></a>
-		<a href="" onclick="return displayZodiac(1, 20)"><li><div class="star">&#10022</div>Dra</li></a>
-		<a href="" onclick="return displayZodiac(2, 19)"><li><div class="star">&#10022</div>Elu</li></a>
-		<a href="" onclick="return displayZodiac(3, 21)"><li><div class="star">&#10022</div>Equ</li></a>
-		<a href="" onclick="return displayZodiac(4, 20)"><li><div class="star">&#10022</div>Fen</li></a>
-		<a href="" onclick="return displayZodiac(5, 21)"><li><div class="star">&#10022</div>Fer</li></a>
-		<a href="" onclick="return displayZodiac(6, 21)"><li><div class="star">&#10022</div>Jud</li></a>
-		<a href="" onclick="return displayZodiac(7, 23)"><li><div class="star">&#10022</div>Kio</li></a>
-		<a href="" onclick="return displayZodiac(8, 23)"><li><div class="star">&#10022</div>Per</li></a>
-		<a href="" onclick="return displayZodiac(9, 23)"><li><div class="star">&#10022</div>Sat</li></a>
-		<a href="" onclick="return displayZodiac(10, 23)"><li><div class="star">&#10022</div>Ten</li></a>
-		<a href="" onclick="return displayZodiac(11, 22)"><li><div class="star">&#10022</div>Sol</li></a>
+		<a onclick="return displayZodiac(12, 22)"><li><div class="star zodiac-link">&#10022</div>Bel</li></a>
+		<a onclick="return displayZodiac(1, 20)"><li><div class="star zodiac-link">&#10022</div>Dra</li></a>
+		<a onclick="return displayZodiac(2, 19)"><li><div class="star zodiac-link">&#10022</div>Elu</li></a>
+		<a onclick="return displayZodiac(3, 21)"><li><div class="star zodiac-link">&#10022</div>Equ</li></a>
+		<a onclick="return displayZodiac(4, 20)"><li><div class="star zodiac-link">&#10022</div>Fen</li></a>
+		<a onclick="return displayZodiac(5, 21)"><li><div class="star zodiac-link">&#10022</div>Fer</li></a>
+		<a onclick="return displayZodiac(6, 21)"><li><div class="star zodiac-link">&#10022</div>Jud</li></a>
+		<a onclick="return displayZodiac(7, 23)"><li><div class="star zodiac-link">&#10022</div>Kio</li></a>
+		<a onclick="return displayZodiac(8, 23)"><li><div class="star zodiac-link">&#10022</div>Per</li></a>
+		<a onclick="return displayZodiac(9, 23)"><li><div class="star zodiac-link">&#10022</div>Sat</li></a>
+		<a onclick="return displayZodiac(10, 23)"><li><div class="star zodiac-link">&#10022</div>Ten</li></a>
+		<a onclick="return displayZodiac(11, 22)"><li><div class="star zodiac-link">&#10022</div>Sol</li></a>
 	</ul>
 
 	<script src="js/calZ.js"></script>
+	<script src="js/audioHandler.js"></script>
 </body>
 
 <link rel="stylesheet" href="style.css">
