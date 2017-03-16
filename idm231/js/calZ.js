@@ -1,9 +1,6 @@
+//gets date
 function calZodiac() {
     console.log("function called");
-    var output = document.getElementById("results");
-    var title = document.getElementById('sign-title');
-
-    var main = document.getElementsByTagName("main")[0];
 
     var fName = document.getElementById("fname").value;
     var lName = document.getElementById("lname").value;
@@ -32,7 +29,21 @@ function calZodiac() {
         age = currentYear - bDay.getFullYear();
     }
 
-    //calculate sign
+    displayZodiac(month, day, age, fName, lName);
+
+    return false;
+}
+
+//determines and displays output
+function displayZodiac(month, day, age, fName, lName)
+{
+	console.log('displayZodiac called');
+
+	var output = document.getElementById("results");
+	var title = document.getElementById('sign-title');
+	var main = document.getElementsByTagName("main")[0];
+
+	//calculate sign
     var sign;
     var descript;
 
@@ -46,7 +57,7 @@ function calZodiac() {
         main.getElementsByTagName("img")[0].src = "const/dra.svg";
     } else if ((month == 2 && day >= 19) | (month == 3 && day <= 20)) {
         sign = "Eluvia";
-        descript = 'Legend says this sign came to be when Eluvia, a young maiden, was sent into the sky by her father to save her from the attentions of a lustful mage, and the mage then killed him in vengeance. Eluvias are sensitive creatures always attuned to the emotions of those around her. Perhaps it is because of this that you are always surrounded by friends despite their your nature. However, you tend to get lost in the turmoils of others and forget to care for yourself.';
+        descript = 'Legend says this sign came to be when Eluvia, a young maiden, was sent into the sky by her father to save her from the attentions of a lustful mage, and the mage then killed him in vengeance. Eluvias are sensitive creatures always attuned to the emotions of those around her. Perhaps it is because of this that you are always surrounded by friends despite your nature. However, you tend to get lost in the turmoils of others and forget to care for yourself.';
         main.getElementsByTagName("img")[0].src = "const/elu.svg";
     } else if ((month == 3 && day >= 21) | (month == 4 && day <= 19)) {
         sign = "Equinor";
@@ -89,7 +100,18 @@ function calZodiac() {
         descript = 'WHAT ARE YOU??';
     }
 
-    var msg = "<p>" +
+    var msg;
+
+    //using argument length to determine if function is called from the zodiac menu or user info
+    //2 args = called from menu
+    //5 args = input fields
+
+    if (arguments.length == 2) {
+    	msg = descript;
+    }
+    else if(arguments.length == 5)
+    {
+    	msg = "<p>" +
         "Hello, " +
         fName +
         " " +
@@ -98,7 +120,12 @@ function calZodiac() {
         age +
         " years old and your sign is the " +
         sign +
-        ".</i>" + ' ' + descript;
+        ".</p>" + ' ' + descript;
+    }
+    else
+    {
+    	msg = 'uhh something broke';
+    }
 
     output.innerHTML = msg;
     title.innerHTML = sign;

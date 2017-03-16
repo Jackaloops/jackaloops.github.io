@@ -143,8 +143,14 @@ body
     align-items: center;
 }
 
-#menu li
+#menu li 
 {
+    font-size: 2rem;
+
+    text-align: center;
+
+    color: #fff;
+
     display: flex;
 
     width: 100%;
@@ -154,15 +160,8 @@ body
 
     align-items: center;
     justify-content: center;
-}
 
-#menu li a
-{
-    font-size: 2rem;
-
-    text-align: center;
-
-    color: #fff;
+    border-bottom: 1px solid white;
 }
 
 #menu img
@@ -288,6 +287,10 @@ a
     color: #fff;
 }
 
+footer
+{
+    display: none;
+}
 
 
 
@@ -346,6 +349,8 @@ a
 
     footer
     {
+        display: block;
+
         background-color: rgba(255, 255, 255, .7);
         font-size: 1.1rem;
 

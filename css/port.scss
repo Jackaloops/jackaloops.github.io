@@ -115,13 +115,18 @@ body
   .showcase_grid
   {
     flex-flow: column;
-
+    width: 100vw;
     justify-content: flex-start;
   }
 
   figure
   {
     flex-shrink: 0;
+  }
+
+  .img-wrap
+  {
+    opacity: 1;
   }
 
    figcaption {
@@ -132,5 +137,25 @@ body
       opacity: 1;
      }
    }
+
+      #toggle_button
+    {
+      position: fixed;
+      bottom: 0;
+      left: -20px;
+
+      font-size: 1.5rem;
+      width: 6rem;
+
+      text-align: center;
+    }
+
+    #toggle_button img
+    {   
+      width: 4rem;
+      -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, .5));
+      -o-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, .5));
+       filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, .5));
+    }
         
 }
