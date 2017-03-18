@@ -47,6 +47,14 @@ function displayZodiac(month, day, age, fName, lName)
     var sign;
     var descript;
 
+    //checks for image tag
+    if(main.getElementsByTagName('img').length == 0)
+    {
+        var image = document.createElement("IMG");
+
+        main.appendChild(image);
+    }
+
     if ((month == 12 && day >= 22) | (month == 1 && day <= 19)) {
         sign = "Bellitanus";
         descript = 'You are goal-oriented and determined, but can be a bit vain. You tend to have a positive outlook on life that some consider naive, but your ambition keeps you from being aloof. Those born under Bellitanus are said to be blessed with great beauty, and many prominent Queens of the past have been said to be personifications of The Maiden.';

@@ -38,6 +38,11 @@ body
 	margin: 0 auto;
 	text-align: center;
 
+    display: flex;
+    flex-flow: column;
+
+    height: 100vh;
+
     h1
     {
         padding: 3rem;
@@ -54,7 +59,7 @@ body
 		opacity: .90;
 		
 		width: 70%;
-     	margin: auto;
+     	margin: 0 auto;
 
         input[type="text"]
         {
@@ -108,10 +113,15 @@ body
         justify-content: space-around;
         align-items: center;
 
+        align-self: center;
+
+        margin: auto 0;
+
         display: flex;
         width: 100%;
         padding: 3rem;
         padding-bottom: 1rem;
+        padding-top: 1rem;
         .text-area
         {
             height: 100%;
@@ -127,6 +137,7 @@ body
         img
         {
             height: 60vh;
+            max-width: 50vw;
 
             flex-shrink: 1;
         }
@@ -140,7 +151,7 @@ body
 
 	#menu_toggle:checked ~ .label-container
     {
-    	bottom: 100px;
+    	bottom: 700px;
     	
     }
 
@@ -153,49 +164,83 @@ body
     {
     	position: absolute;
     	margin: 0 auto;
+        margin-bottom: .5rem;
 		width: 100%;
-    	bottom: 0;
+    	bottom: 0px;
 
-    	transition: bottom .1s linear;
+    	transition: bottom .20s ease-out;
 
     	#toggle_button
     	{
     		position: relative;
 	 		margin: 0 auto;
-	 		background-color: rgba(0, 0, 0, .5);
+	 		background-color: rgba(0, 0, 0, .8);
 	 		width: 5rem;
+            padding: .5rem;
 		
 			font-size: 1.25rem;
     		color: $title-color;
-
+            cursor: pointer;
     	}
     }
 
     ul
     {
     	display: flex;
-    	width: 100%;
-    	height: 101px;
+        flex-wrap: wrap;
+    	width: 100vw;
+    	height: 701px;
+
+        align-items: center;
 
 		position: fixed;
-		bottom: -101px;
+		bottom: -700px;
 		
-		justify-content: space-around;
-		align-items: center;
+		justify-content: flex-start;
+		background-color: rgba(0, 0, 0, .90);
+        list-style: none;
 
-		background-color: rgba(0, 0, 0, .5);
+		transition: .20s ease-out;
 
-		transition: bottom .1s linear;
-
-		li
+		a
 		{
-			display: inline-block;
+            border: 1px solid black;
+
+			//display: inline-block;
+            text-decoration: none;
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 25vw;
+            height: 233px;
+
+            padding-top: 23px;
+            padding-bottom: 10px;
 
 			color: $title-color;
+            font-size: 1.5rem;
+            font-family: $para-text;
+
+            transition: .20s ease-out;
+
+            &:hover
+            {
+                background-color: rgba(0, 255, 255, .1)
+            }
 
 			.star
 			{
-				font-size: 3rem;
+                cursor: pointer;
+
+                margin-bottom: 20px;
+
+                img 
+                {
+                    height: 115px;
+                    max-width: 25vw;
+                }
 			}
 		}
     }
@@ -222,11 +267,20 @@ body
 }
 
 .fadeInOut {
-	-webkit-animation: fadeIn 4s infinite alternate;
-	-moz-animation: fadeIn 4s infinite alternate;
-	-ms-animation: fadeIn 4s infinite alternate;	
-	-o-animation: fadeIn 4s infinite alternate;
-	animation: fadeIn 4s infinite alternate;
+	-webkit-animation: fadeIn 4s ease-in-out infinite alternate;
+	-moz-animation: fadeIn 4s ease-in-out infinite alternate;
+	-ms-animation: fadeIn 4s ease-in-out infinite alternate;	
+	-o-animation: fadeIn 4s ease-in-out infinite alternate;
+	animation: fadeIn 4s ease-in-out infinite alternate;
+}
+
+//not sure why it lags when using positive time delays but oh well
+.fadeInOut2 {
+    -webkit-animation: fadeIn 4s ease-in-out -1.5s infinite alternate;
+    -moz-animation: fadeIn 4s ease-in-out -1.5s infinite alternate;
+    -ms-animation: fadeIn 4s ease-in-out -1.5s infinite alternate;    
+    -o-animation: fadeIn 4s ease-in-out -1.5s infinite alternate;
+    animation: fadeIn 4s ease-in-out -1.5s infinite alternate;
 }
 
 @-webkit-keyframes fadeIn {
