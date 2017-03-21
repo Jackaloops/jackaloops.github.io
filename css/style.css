@@ -285,6 +285,16 @@ a
 {
     text-decoration: none;
 
+    color: #000;
+}
+
+#menu a li
+{
+    color: #fff;
+}
+
+#menu a
+{
     color: #fff;
 }
 
