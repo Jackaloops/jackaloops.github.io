@@ -78,7 +78,7 @@ body
           opacity: 1;
         }
 
-        figcaption {
+        .caption {
 
           font-size: 3rem;
           position: absolute;
@@ -152,7 +152,7 @@ body
     opacity: 1;
   }
 
-   figcaption {
+   .caption {
      opacity: 1;
 
      &:hover
