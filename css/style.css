@@ -149,7 +149,6 @@ body
 
     text-align: center;
 
-    color: #fff;
 
     display: flex;
 
@@ -162,6 +161,11 @@ body
     justify-content: center;
 
     border-bottom: 1px solid white;
+}
+
+#menu li div
+{
+    color: white;
 }
 
 #menu img
@@ -435,6 +439,11 @@ s
     #showcase_button
     {
         width: 9rem;
+    }
+
+    #navlink_container img
+    {
+        width: 100%;
     }
 
     .title-font

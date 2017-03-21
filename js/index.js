@@ -1,5 +1,5 @@
 // JS scripts for hover effects on my kickass lantern
-// Yeah, kinda inefficient because its loading mobile AND desktop eventListeners, but i don't know enough jQuery yet :I
+// Yeah, kinda inefficient because its loading mobile AND desktop
 // Will fix eventually
 
 //finds variables
@@ -19,7 +19,7 @@ showButtonMobile.addEventListener('touchstart', changeMobile);
 
 
 function changeShowPic() {
-	// console.log('function called');
+	console.log('function called');
 	showButton.getElementsByTagName('img')[0].src = 'img/showcase-hover-icon.svg';
 }
 
@@ -30,7 +30,7 @@ function changeShowPicBack() {
 
 function changeMobile() {
 
-	// console.log('changeMobile triggered: ', showButtonMobile.getElementsByTagName('img')[0].src);
+	console.log('changeMobile triggered: ', showButtonMobile.getElementsByTagName('img')[0].src);
 
 	if(showButtonMobile.getElementsByTagName('img')[0].src === mobileVer) {
 		showButtonMobile.getElementsByTagName('img')[0].src = 'img/showcase-hover-icon.svg';

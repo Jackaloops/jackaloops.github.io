@@ -16,9 +16,13 @@ body
   #wrap_all
   {
     height: 100%;
+    min-width: 0;
+    min-height: 0;
 
     display: flex;
     flex-flow: column;
+
+
 
     align-items: center;
     justify-content: center;
@@ -33,6 +37,8 @@ body
 
 .showcase_grid {
     height: initial;
+    min-width: 0;
+    min-height: 0;
 
     display: flex;
     align-items: center;
@@ -40,7 +46,10 @@ body
 
     figure {
       width: 350px;
+      min-width: 0;
+      min-height: 0;
       height: 350px;
+      flex-shrink: 1;
 
       margin: 0;
       text-align: center;
@@ -52,14 +61,16 @@ body
     
     .img-wrap {
       width: 100%;
+      min-width: 0;
+      min-height: 0;
       height: 100%;
       position: relative;
       
       opacity: .5;
       
       display: flex;
-        justify-content: center;
-        align-items: center;
+      justify-content: center;
+      align-items: center;
       
       transition: .5s ease-in-out;
 
@@ -73,12 +84,15 @@ body
           position: absolute;
           margin: 0 auto;
           padding: 200px;
+          min-width: 0;
+          min-height: 0;
 
           opacity: 0;
 
           text-align: center;
           vertical-align: middle;
           color: #fff;
+
 
           transition: 0.5s ease-in-out;
 
@@ -98,15 +112,29 @@ body
   font-size: 1.5rem;
 }
 
+
+@media screen and (max-width: 1080px)
+{
+  a
+  {
+    width: 30vw;
+    overflow: hidden;
+  }
+}
+
 @media screen and (max-width: 568px)
 {
   body
   {
     padding: 0;
-
     width: 100vw;
   }
   
+  a {
+    width: 350px;
+    overflow: initial;
+  }
+
   .title-div 
   {
     padding: 1rem;
@@ -117,11 +145,6 @@ body
     flex-flow: column;
     width: 100vw;
     justify-content: flex-start;
-  }
-
-  figure
-  {
-    flex-shrink: 0;
   }
 
   .img-wrap
@@ -138,7 +161,7 @@ body
      }
    }
 
-      #toggle_button
+    #toggle_button
     {
       position: fixed;
       bottom: 0;

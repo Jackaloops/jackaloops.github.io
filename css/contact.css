@@ -1,3 +1,26 @@
+#title-rest {
+  font-size: 9rem;
+  line-height: 4rem;
+  margin-top: 5rem; }
 
+@media screen and (max-width: 568px) {
+  #title-rest {
+    font-size: 4rem;
+    margin-top: 0; }
+
+  #rope_container {
+    display: none; }
+
+  #navlink_container {
+    display: flex;
+    flex-flow: column;
+    text-align: center; }
+    #navlink_container .link-wrap {
+      padding: 20vw;
+      padding-bottom: 10vw;
+      font-size: 2.5rem;
+      word-wrap: break-word; }
+      #navlink_container .link-wrap img {
+        width: 100%; } }
 
 /*# sourceMappingURL=contact.css.map */
