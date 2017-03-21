@@ -1,12 +1,18 @@
 #title-rest {
   font-size: 9rem;
   line-height: 4rem;
-  margin-top: 5rem; }
+  margin-top: 2rem; }
 
+.flex-parent {
+  align-items: center; }
+
+@media screen and (max-width: 1025px) {
+  #title-rest {
+    font-size: 5rem; } }
 @media screen and (max-width: 568px) {
   #title-rest {
     font-size: 4rem;
-    margin-top: 0; }
+    margin: 1rem; }
 
   #rope_container {
     display: none; }
@@ -17,10 +23,10 @@
     text-align: center; }
     #navlink_container .link-wrap {
       padding: 20vw;
-      padding-bottom: 10vw;
-      font-size: 2.5rem;
-      word-wrap: break-word; }
-      #navlink_container .link-wrap img {
-        width: 100%; } }
+      padding-bottom: 10vw; }
+      #navlink_container .link-wrap a img {
+        width: 100%; }
+      #navlink_container .link-wrap a div {
+        display: none; } }
 
 /*# sourceMappingURL=contact.css.map */
