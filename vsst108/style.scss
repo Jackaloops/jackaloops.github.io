@@ -1,7 +1,7 @@
 $cubeColor: #60EF73;
 $innerCubeColor: white;
 $shadeColor: #00121d;
-$rotationTime: 60s;
+$rotationTime: 100s;
 $timeQuarter: $rotationTime/4;
 
 @function star-generation($n)
