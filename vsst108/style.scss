@@ -1,3 +1,8 @@
+$cubeColor: #60EF73;
+$shadeColor: #00121d;
+$rotationTime: 100s;
+$timeQuarter: $rotationTime/4;
+
 @function star-generation($n)
 {
 	$value: '#{random(2000)}px #{random(2000)}px #fff';
@@ -12,7 +17,8 @@
 
 $stars1: star-generation(1000);
 $stars2: star-generation(500);
-$stars3: star-generation(250);
+$stars3: star-generation(300);
+$stars4: star-generation(50);
 
 body
 {
@@ -29,13 +35,13 @@ body
 
 	box-shadow: $stars1;
 
-	animation: outMove 10s linear infinite;
+	animation: outMove #{$rotationTime * 2} linear infinite;
 
 	&:after
 	{
 		content: " ";
 		position: absolute;
-		left: 2000px;
+		left: -2000px;
 		width: 1px;
 		height: 1px;
 		box-shadow: $stars1;
@@ -47,16 +53,16 @@ body
 	width: 2px;
 	height: 2px;
 	background: transparent;
-
+	z-index: 5;
 	box-shadow: $stars2;
 
-	animation: outMove 20s linear infinite;
+	animation: outMove $rotationTime linear infinite;
 
 	&:after
 	{
 		content: " ";
 		position: absolute;
-		left: 2000px;
+		left: -2000px;
 		width: 2px;
 		height: 2px;
 		box-shadow: $stars2;
@@ -68,21 +74,148 @@ body
 	width: 3px;
 	height: 3px;
 	background: transparent;
+	position: relative;
+	z-index: 10 !important;
 
 	box-shadow: $stars3;
 
-	animation: outMove 30s linear infinite;
+	animation: outMove #{$rotationTime / 2} linear infinite;
 
 	&:after
 	{
 		content: " ";
 		position: absolute;
-		left: 2000px;
+		left: -2000px;
 		width: 3px;
 		height: 3px;
 		box-shadow: $stars3;
 	}
 }
+
+// #stars4
+// {
+// 	width: 4px;
+// 	height: 4px;
+// 	background: transparent;
+// 	position: relative;
+// 	z-index: 10 !important;
+
+// 	box-shadow: $stars4;
+
+// 	animation: outMove #{$rotationTime / 4} linear infinite;
+
+// 	&:after
+// 	{
+// 		content: " ";
+// 		position: absolute;
+// 		left: -2000px;
+// 		width: 4px;
+// 		height: 4px;
+// 		box-shadow: $stars4;
+// 	}
+// }
+
+//cube stuff
+// .ruler
+// {
+// 	height: 100vh;
+// 	width: 1px;
+// 	background-color: white;
+// 	position: fixed;
+// 	left: 0;
+// 	right: 0;
+// 	margin: auto;
+// }
+.cube-wrap
+{
+	position: relative;
+  	z-index: 4;
+  	left: 0;
+	right: 0;
+	top: 50%;
+	transform: translateY(-100px);
+  	perspective: 1500px;
+}
+
+.cube
+{
+	transform-style: preserve-3d;
+	margin: auto;
+	height: 200px;
+	width: 200px;
+
+	div
+	{
+		position: absolute;
+		width: 200px;
+		height: 200px;
+
+		opacity: .5;
+	}
+
+	animation: rotate $rotationTime infinite linear;
+
+	.front
+	{
+		background-color: $cubeColor;
+		outline: solid 1px white;
+
+
+		transform: translateZ(100px);
+
+		animation: lighting $rotationTime infinite linear;
+	}
+
+	.back 
+	{
+		background-color: $cubeColor;
+		outline: solid 1px white;
+
+		transform: translateZ(-100px) rotateY(180deg);
+		animation: lighting $rotationTime infinite #{$timeQuarter * 2} linear;
+	}
+
+	.left 
+	{
+		background-color: $cubeColor;
+		outline: solid 1px white;
+
+		transform: rotateY(270deg) translateX(-100px);
+		transform-origin: center left;
+		animation: lighting $rotationTime infinite #{$timeQuarter} linear;
+	}
+
+	.right 
+	{	
+		background-color: $cubeColor;
+		outline: solid 1px white;
+
+		transform: rotateY(-270deg) translateX(100px);
+		transform-origin: top right;
+		animation: lighting $rotationTime infinite #{$timeQuarter * 3} linear;
+	}
+
+
+
+}
+
+
+	.sphere
+	{
+		position: fixed;
+		background: white;
+		// opacity: .9;
+  		border-radius: 50%;
+  		height: 100px;
+  		width: 100px;
+  		left: 0;
+  		right: 0;
+  		top: 50%;
+  		transform: translateY(-50px);
+  		margin: auto;
+
+  		z-index: -1;
+	}
 
 @keyframes outMove
 {
@@ -92,6 +225,34 @@ body
     }
     to
     {
-      transform: translate(-2000px);
+      transform: translate(2000px);
     }
+}
+
+@keyframes rotate
+{
+	0% 
+	{
+		transform: rotateY(0deg);
+	}
+	100%
+	{
+		transform: rotateY(360deg);
+	}
+}
+
+@keyframes lighting
+{
+	0%
+	{
+		background-color: $cubeColor;
+	}
+	50%
+	{
+		background-color: $shadeColor;
+	}
+	100%
+	{
+		background-color: $cubeColor;
+	}
 }
