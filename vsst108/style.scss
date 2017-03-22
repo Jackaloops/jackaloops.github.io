@@ -195,9 +195,71 @@ body
 		animation: lighting $rotationTime infinite #{$timeQuarter * 3} linear;
 	}
 
-
-
 }
+
+.innercube
+	{
+		transform-style: preserve-3d;
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 50%;
+		margin: auto;
+		height: 100px;
+		width: 100px;
+		transform: translateY(-100px) translateX(-50px);
+		
+		div
+		{
+			position: absolute;
+			width: 100px;
+			height: 100px;
+
+			opacity: .5;
+		}
+
+		.front2
+		{
+			background-color: $cubeColor;
+			outline: solid 1px white;
+			width: 100px;
+			height: 100px;
+
+			transform: translateZ(50px) translateX(50px) translateY(50px);
+		}
+
+		.back2 
+		{
+			background-color: $cubeColor;
+			outline: solid 1px white;
+			width: 100px;
+			height: 100px;
+
+			transform: translateZ(-50px) translateX(50px) translateY(50px) rotateY(180deg);
+		}
+
+		.left2
+		{
+			background-color: $cubeColor;
+			outline: solid 1px white;
+			width: 100px;
+			height: 100px;
+	
+			transform: rotateY(270deg) translateX(-50px) translateY(50px) translateZ(-50px);
+			transform-origin: center left;
+		}
+
+		.right2 
+		{	
+			background-color: $cubeColor;
+			outline: solid 1px white;
+			width: 100px;
+			height: 100px;
+		
+			transform: rotateY(-270deg) translateX(50px) translateY(50px) translateZ(50px);
+			transform-origin: top right;
+		}
+	}
 
 
 	.sphere
