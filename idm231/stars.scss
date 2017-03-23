@@ -41,7 +41,7 @@ body
 
 	box-shadow: $stars1;
 
-	animation: outMove #{$rotationTime * 1.5} linear infinite;
+	animation: outMove #{$rotationTime * 2} linear infinite;
 
 	&:after
 	{
@@ -85,7 +85,7 @@ body
 
 	box-shadow: $stars3;
 
-	animation: outMove #{$rotationTime / 1.5} linear infinite;
+	animation: outMove #{$rotationTime / 2} linear infinite;
 
 	&:after
 	{
