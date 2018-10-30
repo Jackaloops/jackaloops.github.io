@@ -13,6 +13,11 @@
     display: inline-block;
 }
 
+.frontCont img {
+    height: 13rem;
+    display: inline-block;
+}
+
 .frontCont div ul {
     list-style-type: none;
     padding: 0;
@@ -26,7 +31,7 @@
 .frontCont div ul li {
     display: inline;
     width: 100%;
-    
+
 }
 
 .nameText {
@@ -57,4 +62,24 @@
 a {
     text-decoration: none;
     color: inherit;
+}
+
+@media screen and (max-width: 810px) {
+    .frontCont {
+        display: flex;
+        align-content: space-around;
+
+        max-width: 80%;
+    }
+
+    .frontCont img {
+        width: 0px;
+    }
+
+    .nameText {
+        padding-left: 0;
+        
+    }
+
+
 }
