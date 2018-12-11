@@ -1,5 +1,5 @@
 var numbers = [];	//array where numbers are stored
-var amount = 100;	//# of values in the array
+var amount = 1000;	//# of values in the array
 var range = 100;	//max range of numbers
 
 //sorts the array using Insertion Sort
